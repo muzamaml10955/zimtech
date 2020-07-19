@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6F6F6"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.home.HomeFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+       >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:id="@+id/banner"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                android:src="@drawable/baneeasylabr" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#FFFEFE"
+                android:focusable="auto"
+                android:fontFamily="sans-serif-condensed-light"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="Click Any Lab"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display4"
+                android:textColor="#000000"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:typeface="serif" />
+
+
+            <TableLayout
+                android:id="@+id/tablelyout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp">
+
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_height="70dp"
+                        android:layout_margin="5dp"
+                        android:layout_weight="2"
+                        android:clickable="true"
+                        android:elevation="5dp"
+                        app:cardCornerRadius="10dp">
+
+
+                        <ImageView
+                            android:id="@+id/nayab"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="2"
+                            android:clickable="true"
+                            android:padding="2dp"
+                            android:src="@drawable/nayab" />
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_height="70dp"
+                        android:layout_margin="5dp"
+                        android:layout_weight="2"
+                        android:clickable="true"
+                        android:elevation="5dp"
+                        app:cardCornerRadius="10dp">
+
+                        <ImageView
+                            android:id="@+id/islamabaddiagnostic"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="2"
+                            android:clickable="true"
+                            android:padding="2dp"
+                            android:src="@drawable/isblast" />
+                    </androidx.cardview.widget.CardView>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp">
+                    <androidx.cardview.widget.CardView
+                        android:layout_height="70dp"
+                        android:layout_margin="5dp"
+                        android:layout_weight="2"
+                        android:clickable="true"
+                        android:elevation="5dp"
+                        app:cardCornerRadius="10dp">
+
+
+                        <ImageView
+                            android:id="@+id/excel"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="2"
+                            android:clickable="true"
+                            android:padding="2dp"
+                            android:src="@drawable/excel" />
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_height="70dp"
+                        android:layout_margin="5dp"
+                        android:layout_weight="2"
+                        android:clickable="true"
+                        android:elevation="5dp"
+                        app:cardCornerRadius="10dp">
+
+
+                    <ImageView
+                        android:id="@+id/biocare"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="2"
+                        android:clickable="true"
+                        android:padding="2dp"
+                        android:src="@drawable/bcl" />
+                    </androidx.cardview.widget.CardView>
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_height="70dp"
+                        android:layout_margin="5dp"
+                        android:layout_weight="2"
+                        android:clickable="true"
+                        android:elevation="5dp"
+                        app:cardCornerRadius="10dp">
+
+
+                        <ImageView
+                            android:id="@+id/chugtaie"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="2"
+                            android:clickable="true"
+                            android:padding="2dp"
+                            android:src="@drawable/chut" />
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_height="70dp"
+                        android:layout_margin="5dp"
+                        android:layout_weight="2"
+                        android:clickable="true"
+                        android:elevation="5dp"
+                        app:cardCornerRadius="10dp">
+
+                        <ImageView
+                            android:id="@+id/advance"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="2"
+                            android:clickable="true"
+                            android:padding="2dp"
+                            android:src="@drawable/advanced" />
+                    </androidx.cardview.widget.CardView>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp">
+                    <androidx.cardview.widget.CardView
+                        android:layout_height="70dp"
+                        android:layout_margin="5dp"
+                        android:layout_weight="2"
+                        android:clickable="true"
+                        android:elevation="5dp"
+                        app:cardCornerRadius="10dp">
+
+
+                        <ImageView
+                            android:id="@+id/city"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="2"
+                            android:clickable="true"
+                            android:padding="2dp"
+                            android:src="@drawable/city" />
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_height="70dp"
+                        android:layout_margin="5dp"
+                        android:layout_weight="2"
+                        android:clickable="true"
+                        android:elevation="5dp"
+                        app:cardCornerRadius="10dp">
+
+
+                        <ImageView
+                            android:id="@+id/ibnesena"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="2"
+                            android:clickable="true"
+                            android:padding="2dp"
+                            android:src="@drawable/ibne" />
+                    </androidx.cardview.widget.CardView>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp">
+                    <androidx.cardview.widget.CardView
+                        android:layout_height="70dp"
+                        android:layout_margin="5dp"
+                        android:layout_weight="2"
+                        android:clickable="true"
+                        android:elevation="5dp"
+                        app:cardCornerRadius="10dp">
+
+
+                        <ImageView
+                            android:id="@+id/shifa"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="2"
+                            android:clickable="true"
+                            android:padding="2dp"
+                            android:src="@drawable/shifa" />
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_height="70dp"
+                        android:layout_margin="5dp"
+                        android:layout_weight="2"
+                        android:clickable="true"
+                        android:elevation="5dp"
+                        app:cardCornerRadius="10dp">
+
+
+                        <ImageView
+                            android:id="@+id/capital"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="2"
+                            android:clickable="true"
+                            android:padding="2dp"
+                            android:src="@drawable/capitaldiacnostic" />
+                    </androidx.cardview.widget.CardView>
+
+                </TableRow>
+            </TableLayout>
+
+
+
+            <WebView
+                android:id="@+id/homewebview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
