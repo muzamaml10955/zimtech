@@ -1,20 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:showIn="navigation_view">
+    tools:showIn="navigation_view"
+    android:title="our services">
 
-    <group android:checkableBehavior="single">
+    <group android:checkableBehavior="single"
+        android:orderInCategory="2">
+
+        <item
+            android:id="@+id/firstOne"
+            android:orderInCategory="1"
+            android:title="Our Services"
+            >
+        <menu>
+
         <item
             android:id="@+id/nav_home"
             android:icon="@drawable/ic_menu_camera"
             android:title="@string/menu_home" />
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/nav_nayyab"
             android:icon="@drawable/ic_menu_gallery"
-            android:title="@string/menu_gallery" />
+            android:title="@string/menu_nayab" />
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/nav_islamabad"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/menu_slideshow" />
+            android:title="@string/menu_islamabad" />
+        <item
+            android:id="@+id/nav_excellab"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="@string/menu_excel" />
+        <item
+            android:id="@+id/nav_biocare"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/menu_bicare" />
+        <item
+            android:id="@+id/nav_chugtaie"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_capital" />
+        <item
+            android:id="@+id/nav_advance"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="@string/menu_advanced" />
+        <item
+            android:id="@+id/nav_city"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/menu_city" />
+        <item
+            android:id="@+id/nave_ibnesena"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_ibnesena" />
+        <item
+            android:id="@+id/nav_shifa"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/menu_shifa" />
+        <item
+            android:id="@+id/nav_capital"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_capital" />
+
+        </menu>
+        </item>
+
     </group>
 </menu>

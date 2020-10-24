@@ -4,19 +4,57 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
     app:startDestination="@+id/nav_home">
-
     <fragment
         android:id="@+id/nav_home"
         android:name="com.wmwebs.easylab.ui.home.HomeFragment"
+        android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.wmwebs.easylab.ui.gallery.GalleryFragment"
-        tools:layout="@layout/fragment_gallery" />
-
+        android:id="@+id/nav_biocare"
+        android:name="com.wmwebs.easylab.ui.Biocare.biocareFragment"
+        android:label="@string/menu_bicare"
+        tools:layout="@layout/fragment_biocare" />
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.wmwebs.easylab.ui.slideshow.SlideshowFragment"
-        tools:layout="@layout/fragment_slideshow" />
+        android:id="@+id/nav_capital"
+        android:name="com.wmwebs.easylab.ui.capital.capital"
+        android:label="@string/menu_capital"
+        tools:layout="@layout/capital_fragment" />
+    <fragment
+        android:id="@+id/nav_advance"
+        android:name="com.wmwebs.easylab.ui.advance.advance"
+        android:label="@string/menu_advanced"
+        tools:layout="@layout/fragment_advance" />
+    <fragment
+        android:id="@+id/nav_city"
+        android:name="com.wmwebs.easylab.ui.city.city"
+        android:label="@string/menu_city"
+        tools:layout="@layout/fragment_city" />
+    <fragment
+        android:id="@+id/nav_excellab"
+        android:name="com.wmwebs.easylab.ui.excel.excellab"
+        android:label="@string/menu_excel"
+        tools:layout="@layout/fragment_excel" />
+    <fragment
+        android:id="@+id/nave_ibnesena"
+        android:name="com.wmwebs.easylab.ui.ibnesena.ibnesena"
+        android:label="@string/menu_ibnesena"
+        tools:layout="@layout/fragment_ibnesena" />
+    <fragment
+        android:id="@+id/nav_islamabad"
+        android:name="com.wmwebs.easylab.ui.islamabad.islamabad"
+        android:label="@string/menu_islamabad"
+        tools:layout="@layout/fragment_islamabad" />
+    <fragment
+        android:id="@+id/nav_nayyab"
+        android:name="com.wmwebs.easylab.ui.nayyab.nayyab"
+        android:label="@string/menu_nayab"
+        tools:layout="@layout/fragment_nayyab" />
+    <fragment
+        android:id="@+id/nav_shifa"
+        android:name="com.wmwebs.easylab.ui.shifa.shifa"
+        android:label="@string/menu_shifa"
+        tools:layout="@layout/fragment_shifa" />
+
+
 </navigation>

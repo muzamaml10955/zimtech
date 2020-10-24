@@ -8,6 +8,16 @@
     <string name="action_settings">Settings</string>
 
     <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_nayab">Nayab</string>
+    <string name="menu_islamabad">Islamabad</string>
+    <string name="menu_excel">Excel</string>
+    <string name="menu_bicare">Biocare</string>
+    <string name="menu_chughtai">Chughtai</string>
+    <string name="menu_advanced">Advanced</string>
+    <string name="menu_city">City</string>
+    <string name="menu_ibnesena">Ibnesena</string>
+    <string name="menu_shifa">Shifa</string>
+    <string name="menu_capital">Capital</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -1,6 +1,13 @@
-package com.wmwebs.easylab.ui.gallery;
+package com.wmwebs.easylab.ui.shifa;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,45 +17,51 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
-
 import com.wmwebs.easylab.R;
-
-public class GalleryFragment extends Fragment {
-
-
+public class shifa extends Fragment {
     WebView webView;
-
+    SwipeRefreshLayout swipeRefreshLayout;
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
+        View root = inflater.inflate(R.layout.fragment_shifa, container, false);
+        webView = root.findViewById(R.id.shiffawebview);
+        swipeRefreshLayout=root.findViewById(R.id.shifaswiperefreshayout);
 
-        View root = inflater.inflate(R.layout.fragment_gallery, container, false);
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
 
-        webView = root.findViewById(R.id.chuwebview);
-loadwebview();
+                webView.clearFormData();
+                webView.clearHistory();
+                webView.clearCache(true);
+                loadwebview();
+
+            }
+        });
+
+
+        loadwebview();
         return root;
     }
-
     public void loadwebview() {
         // fruitewebview.clearCache(true);
         // Enable Javascript
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
 //faster to load
-      //  webView.getSettings().setRenderPriority(WebSettings.RenderPriority.HIGH);
+        //  webView.getSettings().setRenderPriority(WebSettings.RenderPriority.HIGH);
         // webView.getSettings().setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
         // webView.getSettings().setAppCacheEnabled(true);
         webView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
-     //   webSettings.setDomStorageEnabled(true);
+        //   webSettings.setDomStorageEnabled(true);
         webSettings.setLayoutAlgorithm(WebSettings.LayoutAlgorithm.NARROW_COLUMNS);
         webSettings.setUseWideViewPort(true);
-      //  webSettings.setSavePassword(true);
-     //   webSettings.setSaveFormData(true);
+        //  webSettings.setSavePassword(true);
+        //   webSettings.setSaveFormData(true);
         webView.loadUrl("https://easylab.pk/chughtai-lab/");
 
 
-        //  swipeRefreshLayout.setRefreshing(true);
+          swipeRefreshLayout.setRefreshing(true);
 
 
         //back button implimetation
@@ -74,12 +87,38 @@ loadwebview();
 
                 //Hide the SwipeReefreshLayout
 
+                swipeRefreshLayout.setRefreshing(false);
 
             }
+
+
+            @Override
+            public boolean shouldOverrideUrlLoading(WebView view, String url) {
+                if (url.startsWith("https://easylab.pk/"))
+                {
+                    view.loadUrl(url);
+                    return true;
+                }
+                else{ if(url.startsWith("https://m.facebook.com"))
+
+
+                {
+                    Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("fb://messaging/117510536301396"));
+                    startActivity(i);
+                    return  true;}
+                else {
+                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+                    startActivity(intent);
+                    return true;
+                }
+
+                }
+
+            }
+
 
         });
 
 
     }
 }
-

@@ -1,6 +1,8 @@
 package com.wmwebs.easylab;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.webkit.WebView;
@@ -31,9 +33,9 @@ WebView webView;
         setSupportActionBar(toolbar);
 
         getSupportActionBar().setDisplayShowTitleEnabled(false);
-      //  toolbar.setLogo(R.drawable.ic_android); // setting a logo in toolba
-      //  toolbar.setNavigationIcon(R.drawable.ic_android); // set icon for navigation button
-      //  toolbar.setNavigationIcon(getResources().getDrawable(R.drawable.ic_android)); // setting a navigation icon in Toolbar
+       /*toolbar.setLogo(R.drawable.ic_menu_camera); // setting a logo in toolba
+       toolbar.setNavigationIcon(R.drawable.ic_menu_camera); // set icon for navigation button
+        toolbar.setNavigationIcon(getResources().getDrawable(R.drawable.ic_menu_camera));*/ // setting a navigation icon in Toolbar
         getSupportActionBar().setDisplayShowTitleEnabled(false); // hide the
 
 
@@ -43,15 +45,34 @@ WebView webView;
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow)
+                R.id.nav_home, R.id.nav_nayyab, R.id.nav_islamabad,R.id.nav_excellab,
+                R.id.nav_biocare,R.id.nav_chugtaie,R.id.nav_advance,R.id.nav_advance,
+                R.id.nav_city,R.id.nave_ibnesena,R.id.nav_shifa,R.id.nav_capital)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
-     /*   NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
-        NavigationUI.setupWithNavController(navigationView, navController);*/
-       /* Objects.requireNonNull(getSupportActionBar()).setHomeButtonEnabled(true);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(false);*/
-      //  getSupportActionBar().setDisplayUseLogoEnabled(true);
+        Log.e("T", "Unable to create Image File");
+        NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
+        NavigationUI.setupWithNavController(navigationView, navController);
+
+    /*    NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
+       NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
+        NavigationUI.setupWithNavController(navigationView, navController);
+        Objects.requireNonNull(getSupportActionBar()).setHomeButtonEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+       getSupportActionBar().setDisplayUseLogoEnabled(true);*/
+
+        toolbar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //   Toast.makeText(getApplicationContext(),"Toolbarclicked",Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+
+            }
+        });
+
+
 
 
     }
